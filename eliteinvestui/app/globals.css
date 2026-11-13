@@ -1,0 +1,198 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* =========================================================
+   LIGHT MODE
+   ========================================================= */
+:root {
+  /* Base App */
+  --background: oklch(0.985 0.002 260);
+  --foreground: oklch(0.16 0.01 260);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.16 0.01 260);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.16 0.01 260);
+
+  --primary: oklch(0.58 0.18 250);
+  --primary-foreground: oklch(0.985 0 0);
+
+  --secondary: oklch(0.95 0.004 260);
+  --secondary-foreground: oklch(0.2 0.01 260);
+
+  --muted: oklch(0.95 0.004 260);
+  --muted-foreground: oklch(0.5 0.01 260); /* better grey for icons */
+
+  --accent: oklch(0.93 0.006 260);
+  --accent-foreground: oklch(0.16 0.01 260);
+
+  --destructive: oklch(0.58 0.22 25);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  --border: oklch(0.9 0.005 260);
+  --input: oklch(0.9 0.005 260);
+  --ring: oklch(0.58 0.18 250);
+
+  --radius: 0.625rem;
+
+  /* =========================================================
+     SIDEBAR (LIGHT MODE FIXED)
+     ========================================================= */
+  --sidebar: oklch(0.97 0.003 260);              /* light grey */
+  --sidebar-foreground: oklch(0.18 0.01 260);    /* dark text */
+
+  --sidebar-primary: oklch(0.58 0.18 250);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+
+  --sidebar-accent: oklch(0.92 0.004 260);       /* hover bg */
+  --sidebar-accent-foreground: oklch(0.18 0.01 260);
+
+  --sidebar-border: oklch(0.88 0.004 260);
+  --sidebar-ring: oklch(0.58 0.18 250);
+
+  /* Charts */
+  --chart-1: oklch(0.58 0.18 250);
+  --chart-2: oklch(0.62 0.14 160);
+  --chart-3: oklch(0.72 0.12 85);
+  --chart-4: oklch(0.62 0.18 30);
+  --chart-5: oklch(0.58 0.14 300);
+
+
+  --status-open: oklch(0.72 0.17 150);   /* green */
+  --status-closed: oklch(0.62 0.22 25);  /* red */
+  --status-pre: oklch(0.78 0.15 85);  
+  
+
+    /* Brand gradient (use everywhere) */
+  --brand-gradient: linear-gradient(
+    90deg,
+    rgba(255, 164, 51, 1) 0%,
+    rgba(78, 133, 255, 1) 100%
+  );
+
+  /* Optional: for logo badge (135deg) */
+  --brand-gradient-diag: linear-gradient(
+    135deg,
+    rgba(255, 164, 51, 1) 0%,
+    rgba(78, 133, 255, 1) 100%
+  );
+
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+.dark {
+  --background: oklch(0.145 0.01 260);
+  --foreground: oklch(0.985 0.002 260);
+
+  --card: oklch(0.18 0.01 260);
+  --card-foreground: oklch(0.985 0.002 260);
+
+  --popover: oklch(0.18 0.01 260);
+  --popover-foreground: oklch(0.985 0.002 260);
+
+  --primary: oklch(0.70 0.16 250);
+  --primary-foreground: oklch(0.18 0.01 260);
+
+  --secondary: oklch(0.22 0.01 260);
+  --secondary-foreground: oklch(0.985 0.002 260);
+
+  --muted: oklch(0.22 0.01 260);
+  --muted-foreground: oklch(0.72 0.01 260);
+
+  --accent: oklch(0.25 0.01 260);
+  --accent-foreground: oklch(0.985 0.002 260);
+
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  --border: oklch(0.28 0.01 260);
+  --input: oklch(0.28 0.01 260);
+  --ring: oklch(0.70 0.16 250);
+
+  /* Sidebar in dark mode */
+  --sidebar: oklch(0.16 0.01 260);
+  --sidebar-foreground: oklch(0.985 0.002 260);
+  --sidebar-primary: oklch(0.70 0.16 250);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.22 0.01 260);
+  --sidebar-accent-foreground: oklch(0.985 0.002 260);
+  --sidebar-border: oklch(0.28 0.01 260);
+  --sidebar-ring: oklch(0.70 0.16 250);
+
+
+    --status-open: oklch(0.78 0.18 150);   /* green */
+  --status-closed: oklch(0.70 0.24 25);  /* red */
+  --status-pre: oklch(0.82 0.16 85);     /* yellow */
+
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+    --color-status-open: var(--status-open);
+  --color-status-closed: var(--status-closed);
+  --color-status-pre: var(--status-pre);
+
+  
+}
+
+@layer utilities {
+  .bg-brand-gradient {
+    background: var(--brand-gradient);
+  }
+
+  .bg-brand-gradient-diag {
+    background: var(--brand-gradient-diag);
+  }
+
+  /* Optional: gradient text */
+  .text-brand-gradient {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Optional: border gradient (needs wrapper) */
+  .ring-brand-gradient {
+    box-shadow: 0 0 0 1px rgba(78, 133, 255, 0.25), 0 0 0 1px rgba(255, 164, 51, 0.25);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

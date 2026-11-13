@@ -29,7 +29,6 @@ finance investment helper tool
 
 
 
-<img width="3565" height="1380" alt="image" src="https://github.com/user-attachments/assets/23dff85b-52ca-4a85-8c82-156e8bf774c5" />
 
 
 
